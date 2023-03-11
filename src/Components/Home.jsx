@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container } from "reactstrap";
 import { Button } from 'reactstrap';
 
 // style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}
 const Home=()=>{
-    return <div class="jumbotron" >
+
+    useEffect(()=>{
+        document.title="Home || Learn code with Nemo";
+
+    },[]);
+
+    return <div className="jumbotron" >
     
             <h1  className="text-center">Learn code with Nemo</h1>
             <p   className="text-center">
