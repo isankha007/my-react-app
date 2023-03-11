@@ -6,6 +6,10 @@ import Home from './Components/Home';
 import Course from './Components/Course';
 import AllCourse from './Components/AllCourses';
 import AddCourse from './Components/AddCourse';
+import { Col, Container, Row } from 'reactstrap';
+import Header from './Components/Header';
+import Menus from './Components/Menus';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
     const btnHandle = ()=>{
@@ -14,11 +18,26 @@ function App() {
 
   return (
     <div>
-      
+      <Router>
       <ToastContainer/>
-      <Home/>
-      <AllCourse/>
-      <AddCourse/>
+      <Container>
+        <Header/>
+       <Row>
+        <Col md={4}>
+          <Menus/>
+        </Col>
+        <Col md={8}>
+        <Routes>
+          <Route path='/' Component={Home} exact />
+          <Route path='/add-course' Component={AddCourse} exact />
+          <Route path='/view-couses' Component={AllCourse} exact />
+        </Routes>
+          
+         
+        </Col>
+       </Row>
+       </Container>
+      </Router>
     </div>
     
   //  <div>
