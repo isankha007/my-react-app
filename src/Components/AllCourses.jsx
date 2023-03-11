@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Course from "./Course";
 
 const AllCourse=()=>{
-    const [courses,setCourses]=useState([
+    const [courses, setCourses]=useState([
         {title:"Django Course",description:"This is python Django course"},
         {title:"Java Course",description:"This is Java course"},
         {title:"Reactjs Course",description:"This is reactjs course"}
@@ -13,6 +13,12 @@ const AllCourse=()=>{
             <h1>
                 All Courses
             </h1>
+            <p>
+               {
+                 courses.length > 0 ? courses.map((item)=><Course course={item}/>) 
+                 :"no courses"
+               }
+            </p>
         </div>
 
     );

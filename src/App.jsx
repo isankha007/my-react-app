@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import Home from './Components/Home';
 import Course from './Components/Course';
 import AllCourse from './Components/AllCourses';
+import AddCourse from './Components/AddCourse';
 
 function App() {
     const btnHandle = ()=>{
@@ -16,8 +17,8 @@ function App() {
       
       <ToastContainer/>
       <Home/>
-      {/* <Course course={{title:"Django Course",description:"This is python Django course"}}/> */}
       <AllCourse/>
+      <AddCourse/>
     </div>
     
   //  <div>
